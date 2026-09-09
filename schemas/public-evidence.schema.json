@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:llm-alpha-discovery:public-evidence:3.0",
+  "title": "LLM alpha discovery public evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "study_id", "evidence_label", "generated_at_utc", "period", "research_scale", "performance", "annual_evidence", "capacity", "statistical_evidence", "disclosures"],
+  "properties": {
+    "schema_version": {"const": "3.0"},
+    "study_id": {"const": "LLM-ALPHA-DISCOVERY"},
+    "evidence_label": {"const": "walk_forward_out_of_sample"},
+    "generated_at_utc": {"type": "string", "format": "date-time"},
+    "period": {"$ref": "#/$defs/period"},
+    "research_scale": {"$ref": "#/$defs/researchScale"},
+    "performance": {"type": "array", "minItems": 6, "maxItems": 6, "items": {"$ref": "#/$defs/performanceRecord"}},
+    "annual_evidence": {"type": "array", "minItems": 5, "items": {"$ref": "#/$defs/annualRecord"}},
+    "capacity": {"type": "array", "minItems": 4, "items": {"$ref": "#/$defs/capacityRecord"}},
+    "statistical_evidence": {"$ref": "#/$defs/statisticalEvidence"},
+    "disclosures": {"type": "array", "minItems": 5, "uniqueItems": true, "items": {"enum": ["historical_simulation_not_live", "walk_forward_out_of_sample", "transaction_costs_are_scenarios", "capacity_is_scenario_based", "private_discovery_system_not_distributed"]}}
+  },
+  "$defs": {
+    "nullableNumber": {"type": ["number", "null"]},
+    "period": {"type": "object", "additionalProperties": false, "required": ["start", "end", "observations"], "properties": {"start": {"type": "string", "format": "date"}, "end": {"type": "string", "format": "date"}, "observations": {"type": "integer", "minimum": 1}}},
+    "researchScale": {"type": "object", "additionalProperties": false, "required": ["instrument_count", "qualified_observations", "positive_annual_buckets"], "properties": {"instrument_count": {"type": "integer", "minimum": 1}, "qualified_observations": {"type": "integer", "minimum": 1}, "positive_annual_buckets": {"type": "integer", "minimum": 0}}},
+    "metricSet": {"type": "object", "additionalProperties": false, "required": ["observations", "total_return", "cagr", "annual_volatility", "sharpe", "max_drawdown", "calmar"], "properties": {"observations": {"type": "integer", "minimum": 1}, "total_return": {"$ref": "#/$defs/nullableNumber"}, "cagr": {"$ref": "#/$defs/nullableNumber"}, "annual_volatility": {"$ref": "#/$defs/nullableNumber"}, "sharpe": {"$ref": "#/$defs/nullableNumber"}, "max_drawdown": {"$ref": "#/$defs/nullableNumber"}, "calmar": {"$ref": "#/$defs/nullableNumber"}}},
+    "performanceRecord": {"type": "object", "additionalProperties": false, "required": ["profile", "one_way_cost_bps", "metrics"], "properties": {"profile": {"enum": ["primary", "higher_risk"]}, "one_way_cost_bps": {"enum": [5, 10, 20]}, "metrics": {"$ref": "#/$defs/metricSet"}}},
+    "annualRecord": {"type": "object", "additionalProperties": false, "required": ["profile", "one_way_cost_bps", "year", "period_return"], "properties": {"profile": {"const": "primary"}, "one_way_cost_bps": {"const": 5}, "year": {"type": "integer", "minimum": 2000, "maximum": 2100}, "period_return": {"type": "number"}}},
+    "capacityRecord": {"type": "object", "additionalProperties": false, "required": ["profile", "capital_scenario_mn", "p95_adv_participation", "maximum_adv_participation"], "properties": {"profile": {"enum": ["primary", "higher_risk"]}, "capital_scenario_mn": {"type": "number", "exclusiveMinimum": 0}, "p95_adv_participation": {"type": "number", "minimum": 0}, "maximum_adv_participation": {"type": "number", "minimum": 0}}},
+    "statisticalEvidence": {"type": "object", "additionalProperties": false, "required": ["qualified_observations", "hac_t_statistic", "positive_annual_buckets"], "properties": {"qualified_observations": {"type": "integer", "minimum": 1}, "hac_t_statistic": {"type": "number"}, "positive_annual_buckets": {"type": "integer", "minimum": 0}}}
+  }
+}

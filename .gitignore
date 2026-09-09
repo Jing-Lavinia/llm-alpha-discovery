@@ -1,0 +1,22 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.env*
+
+# These paths must never be used as a staging area for private research.
+private_ip/
+data/raw/
+artifacts/private/
+**/*.private.*
+*.log
+
+# Draft evidence must pass the release validator before receiving a final name.
+evidence/*.draft.json
+figures/*.draft.*

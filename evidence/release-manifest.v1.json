@@ -1,0 +1,57 @@
+{
+  "manifest_version": "1.0",
+  "release_id": "LLM-ALPHA-DISCOVERY",
+  "generated_at_utc": "2026-09-08T03:40:16.086287+00:00",
+  "files": [
+    {
+      "path": "evidence/aggregate-evidence.v3.json",
+      "bytes": 3644,
+      "sha256": "6e1b70870b25dc45cd7754a50d1ca04eb219003c1e1511f2ba853fe9d3213682"
+    },
+    {
+      "path": "figures/annual_consistency.png",
+      "bytes": 95824,
+      "sha256": "2669ca445c8c7e7dd9457f72f12cd1415d1c5b94108de772aa0d2c9baa5d606a"
+    },
+    {
+      "path": "figures/capacity_scenarios.png",
+      "bytes": 108187,
+      "sha256": "39e197d875e9e0e78cb840118df008d885970110908d67e79c0df6e425a93068"
+    },
+    {
+      "path": "figures/cost_sensitivity.png",
+      "bytes": 162063,
+      "sha256": "e0356b677518c69feaf10f843b7d752e06c51a086301adbe30d9a1992e3887ca"
+    },
+    {
+      "path": "figures/evaluation_path.png",
+      "bytes": 140882,
+      "sha256": "1980c36f7a313d17528d2490778378481b8f8dab2efce7dc9fddc0a02213220a"
+    },
+    {
+      "path": "figures/performance_profile.png",
+      "bytes": 113818,
+      "sha256": "a5f12306872bc2ab127812ff9b3f9590c7d6d15b47901229ff27c9a14a751a50"
+    },
+    {
+      "path": "figures/research_context.png",
+      "bytes": 171258,
+      "sha256": "c99b736ed8fd1774835d816237db22bf0af4fb0afc35c19fda8232bc2870bd70"
+    },
+    {
+      "path": "figures/research_overview.png",
+      "bytes": 158912,
+      "sha256": "f3bb4c5906f5b51a5785f1ba4d1408535651c1933cae17e644c93cf3f522981e"
+    },
+    {
+      "path": "figures/research_roles.png",
+      "bytes": 173710,
+      "sha256": "3fad25114d35425812cf53a16bc638497da7d19599f1e003b0b4ac09464893ca"
+    },
+    {
+      "path": "figures/system_architecture.png",
+      "bytes": 167503,
+      "sha256": "2ea20b97c1cbd5132668c7ceed8b4d4604fae106558d9e9a14ea5f6898b56dfd"
+    }
+  ]
+}

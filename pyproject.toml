@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-alpha-discovery"
+version = "0.1.0"
+description = "Public evidence layer for an LLM-driven alpha discovery system"
+requires-python = ">=3.10,<3.14"
+dependencies = ["jsonschema>=4.23,<5"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+visual = ["matplotlib>=3.8,<4", "pillow>=10,<13"]
+
+[project.scripts]
+alpha-evidence = "alpha_evidence.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q -p no:cacheprovider"

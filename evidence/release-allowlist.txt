@@ -1,0 +1,11 @@
+# Aggregate evidence and figures bound by the public checksum manifest.
+evidence/aggregate-evidence.v3.json
+figures/annual_consistency.png
+figures/capacity_scenarios.png
+figures/cost_sensitivity.png
+figures/evaluation_path.png
+figures/performance_profile.png
+figures/research_context.png
+figures/research_overview.png
+figures/research_roles.png
+figures/system_architecture.png

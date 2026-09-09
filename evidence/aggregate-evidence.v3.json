@@ -1,0 +1,31 @@
+{
+  "schema_version": "3.0",
+  "study_id": "LLM-ALPHA-DISCOVERY",
+  "evidence_label": "walk_forward_out_of_sample",
+  "generated_at_utc": "2026-09-08T03:40:16.086287+00:00",
+  "period": {"start": "2021-01-01", "end": "2025-08-21", "observations": 1123},
+  "research_scale": {"instrument_count": 257, "qualified_observations": 1799, "positive_annual_buckets": 5},
+  "performance": [
+    {"profile": "primary", "one_way_cost_bps": 5, "metrics": {"observations": 1123, "total_return": 0.7809517379066329, "cagr": 0.13827205730127878, "annual_volatility": 0.08577309310119725, "sharpe": 1.5528641111826165, "max_drawdown": -0.04253523426499872, "calmar": 3.2507651524811214}},
+    {"profile": "primary", "one_way_cost_bps": 10, "metrics": {"observations": 1123, "total_return": 0.4430872906410759, "cagr": 0.08578813016764864, "annual_volatility": 0.08571614445169194, "sharpe": 1.0029049200689621, "max_drawdown": -0.056726813302583445, "calmar": 1.5123030040494392}},
+    {"profile": "primary", "one_way_cost_bps": 20, "metrics": {"observations": 1123, "total_return": -0.05270923887457346, "cagr": -0.012077496825445788, "annual_volatility": 0.08583637865670082, "sharpe": -0.09893808542514179, "max_drawdown": -0.19078015959919237, "calmar": -0.06330583248708486}},
+    {"profile": "higher_risk", "one_way_cost_bps": 5, "metrics": {"observations": 1123, "total_return": 1.983846102825329, "cagr": 0.27802491748602476, "annual_volatility": 0.17141663985605152, "sharpe": 1.516284588628978, "max_drawdown": -0.08467254878253816, "calmar": 3.283530748555443}},
+    {"profile": "higher_risk", "one_way_cost_bps": 10, "metrics": {"observations": 1123, "total_return": 0.9574782174615879, "cagr": 0.16267003892029597, "annual_volatility": 0.17126915516878113, "sharpe": 0.9647358246543296, "max_drawdown": -0.11313375901674494, "calmar": 1.4378558648989923}},
+    {"profile": "higher_risk", "one_way_cost_bps": 20, "metrics": {"observations": 1123, "total_return": -0.1582639901234515, "cagr": -0.03792361761485841, "annual_volatility": 0.17144386565856773, "sharpe": -0.1408294747381563, "max_drawdown": -0.3697278318329845, "calmar": -0.10257171451455532}}
+  ],
+  "annual_evidence": [
+    {"profile": "primary", "one_way_cost_bps": 5, "year": 2021, "period_return": 0.1170175421590891},
+    {"profile": "primary", "one_way_cost_bps": 5, "year": 2022, "period_return": 0.1228519295648873},
+    {"profile": "primary", "one_way_cost_bps": 5, "year": 2023, "period_return": 0.0478351491202342},
+    {"profile": "primary", "one_way_cost_bps": 5, "year": 2024, "period_return": 0.1826829048134319},
+    {"profile": "primary", "one_way_cost_bps": 5, "year": 2025, "period_return": 0.1457988594763797}
+  ],
+  "capacity": [
+    {"profile": "primary", "capital_scenario_mn": 2, "p95_adv_participation": 0.008337027396658512, "maximum_adv_participation": 0.08614455598174899},
+    {"profile": "primary", "capital_scenario_mn": 5, "p95_adv_participation": 0.02084256849164628, "maximum_adv_participation": 0.21536138995437246},
+    {"profile": "higher_risk", "capital_scenario_mn": 2, "p95_adv_participation": 0.01666293269051317, "maximum_adv_participation": 0.17288880025404496},
+    {"profile": "higher_risk", "capital_scenario_mn": 5, "p95_adv_participation": 0.04165733172628292, "maximum_adv_participation": 0.4322220006351124}
+  ],
+  "statistical_evidence": {"qualified_observations": 1799, "hac_t_statistic": 5.265309545537077, "positive_annual_buckets": 5},
+  "disclosures": ["historical_simulation_not_live", "walk_forward_out_of_sample", "transaction_costs_are_scenarios", "capacity_is_scenario_based", "private_discovery_system_not_distributed"]
+}
