@@ -35,6 +35,6 @@ def test_public_release_is_narrow_and_complete():
 
 def test_frontier_story_and_public_boundary_are_visible():
     readme = (ROOT / "README.md").read_text(encoding="utf-8").casefold()
-    assert "llm-driven alpha discovery" in readme
-    assert "cumulative research" in readme
-    assert "proprietary system boundary" in readme
+    assert "llm-driven full-stack alpha mining" in readme
+    assert "reusable discovery-and-evaluation engine" in readme
+    assert "evidence contract" in readme
